@@ -1,0 +1,366 @@
+/* ================================
+   AASIST AUTHENTICATION UI
+   Black + Deep Red + Orange + Yellow
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(120, 20, 0, 0.18),
+            transparent 40%
+        ),
+        #000000;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.auth-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ================================
+   AUTH CARD
+================================ */
+
+.auth-card {
+    width: 420px;
+
+    padding: 45px 40px;
+
+    background: #0a0a0a;
+
+    border: 1px solid #3d1208;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 40px rgba(255, 60, 0, 0.12),
+        0 0 100px rgba(255, 140, 0, 0.05);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Top glowing line */
+
+.auth-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #8b0000,
+        #ff3300,
+        #ff8c00,
+        #ffd000
+    );
+}
+
+
+/* ================================
+   LOGO / TITLE
+================================ */
+
+.auth-card h1 {
+    text-align: center;
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #ff2a00,
+        #ff7a00,
+        #ffd000
+    );
+     background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   INPUT GROUP
+================================ */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+    display: block;
+
+    color: #d6d6d6;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+
+.input-group input::placeholder {
+    color: #555;
+}
+
+
+.input-group input:focus {
+    border-color: #ff4d00;
+
+    box-shadow:
+        0 0 0 2px rgba(255, 77, 0, 0.12),
+        0 0 15px rgba(255, 60, 0, 0.1);
+}
+
+
+/* ================================
+   MAIN BUTTON
+================================ */
+
+.auth-card form button[type="submit"] {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+        90deg,
+        #a50000,
+        #ff3c00,
+        #ff8500
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        0 5px 20px rgba(255, 60, 0, 0.18);
+}
+
+
+.auth-card form button[type="submit"]:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 30px rgba(255, 80, 0, 0.3);
+
+    background: linear-gradient(
+        90deg,
+        #c00000,
+        #ff4500,
+        #ffb000
+    );
+}
+
+
+/* ================================
+   SIGNUP SECTION
+================================ */
+
+.signup-section {
+    text-align: center;
+
+    margin-top: 28px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #222;
+}
+
+
+.signup-section p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   SECONDARY BUTTON
+================================ */
+
+.secondary-btn {
+    background: transparent;
+
+    border: 1px solid #63200f;
+
+    color: #ff8a00;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+
+.secondary-btn:hover {
+    background: rgba(255, 70, 0, 0.08);
+
+    border-color: #ff4d00;
+
+    color: #ffd000;
+
+    box-shadow:
+        0 0 15px rgba(255, 70, 0, 0.1);
+}
+
+
+/* ================================
+   SIGNUP FORM
+================================ */
+
+#signupForm h2 {
+    text-align: center;
+
+    font-size: 23px;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+}
+
+
+#signupForm {
+    margin-top: 20px;
+}
+
+
+/* ================================
+   MESSAGES
+================================ */
+
+#loginMessage,
+#signupMessage {
+    text-align: center;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+
+    min-height: 18px;
+}
+
+
+/* ================================
+   HIDDEN
+================================ */
+
+.hidden {
+    display: none;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 480px) {
+
+    .auth-card {
+        width: 100%;
+
+        padding: 35px 25px;
+
+        border-radius: 14px;
+    }
+
+    .auth-card h1 {
+        font-size: 32px;
+    }
+}
